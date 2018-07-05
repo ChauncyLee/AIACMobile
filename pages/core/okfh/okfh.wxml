@@ -1,0 +1,16 @@
+
+<view class="container">
+ 
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="desc">请确认拨打下方求助电话</view>
+      <text class="input">13700000000</text>
+      <view class="btn-area">
+        <button type="primary" bindtap="makePhoneCall" disabled="{{false}}">拨打</button>
+      </view>
+    </view>
+  </view>
+
+  
+</view>

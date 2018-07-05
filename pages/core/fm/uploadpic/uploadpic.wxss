@@ -1,0 +1,5 @@
+@import "../../../common/lib/weui.wxss";
+@import '../../../more/login.wxss';
+.container {
+  background:#f0eff5;
+}

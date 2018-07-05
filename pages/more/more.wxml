@@ -1,0 +1,178 @@
+<!--more.wxml-->
+<view class="container">
+
+  <view class="user-info-box">
+    <block wx:if="{{is_bind}}">
+      <view class="user-info">
+        <view class="info-hd">
+          <image class="user-avatar" src="{{user.wx.avatarUrl}}"></image>
+          <view class="user-title">
+            <text class="user-name">{{user.wx.nickName}}</text>
+            <text class="user-id">账号:{{userid}}</text>
+          </view>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </view>
+    </block>
+    <navigator url="/pages/more/login" class="user-info" wx:else>
+      <view class="info-hd">
+        <image class="user-avatar" src="{{user.wx.avatarUrl}}"></image>
+        <view class="user-title">
+          <text class="user-name">{{user.wx.nickName}}</text>
+          <text class="user-id">未登录</text>
+        </view>
+        <text class="bind-btn">前往登录</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+
+  <block wx:if="{{is_bind}}">
+    <view class="first-list">
+
+      <navigator url="/pages/more/append" class="issue-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/info.png"></image>
+          <text class="btn-text">个人资料</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </navigator>
+
+      <navigator url="fmi" class="about-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/family.png"></image>
+          <text class="btn-text">我的家人</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </navigator>
+      <navigator url="/pages/more/issues" class="issue-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/issue.png"></image>
+          <text class="btn-text">反馈</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </navigator>
+
+
+    </view>
+
+
+
+
+    <view class="more-list">
+      <navigator url="setting" class="about-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/setup.png"></image>
+          <text class="btn-text">账号设置</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </navigator>
+
+
+      <navigator url="about" class="about-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/about.png"></image>
+          <text class="btn-text">关于我们</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+  </block>
+
+
+
+
+
+
+
+  <block wx:else>
+    <view class="first-list">
+
+      <view  class="issue-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/info.png"></image>
+          <text class="btn-text">个人资料</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </view>
+
+      <view class="about-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/family.png"></image>
+          <text class="btn-text">我的家人</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="issue-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/issue.png"></image>
+          <text class="btn-text">反馈</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </view>
+
+
+    </view>
+
+
+
+
+    <view class="more-list">
+      <view class="about-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/setup.png"></image>
+          <text class="btn-text">账号设置</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </view>
+
+
+      <view class="about-link">
+        <view class="more-btn">
+          <image class="btn-icon" src="/images/more/about.png"></image>
+          <text class="btn-text">关于我们</text>
+          <view class="btn-open">
+            <image class="btn-enter" src="/images/more/enter.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </block>
+
+
+
+
+
+
+
+  <navigator url="login" class="login-btn">
+    <text wx:if="{{is_bind}}">切换账号</text>
+    <text wx:else>立即登录</text>
+  </navigator>
+
+</view>

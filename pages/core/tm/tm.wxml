@@ -1,0 +1,98 @@
+<!--xs.wxml-->
+<view class="container {{main.mainDisplay?'home':'active'}}">
+
+
+
+  <!--页面主体部分-->
+  <!-- <view class="main" wx:if="{{main.total}}"> -->
+  <view class="main">
+
+    <!--主体部分标题-->
+    <view class="main-title">
+      <text class="title-text">租户名单 （{{testData.length}}人）</text>
+
+    </view>
+    <!--主体部分内容列表-->
+    <!-- <view class="main-list" wx:for="{{testData}}" wx:key="xh"> -->
+    <view class="main-list">
+      <block wx:for="{{testData}}" wx:key="id">
+        <!--列表的一个元素的模板结构-->
+        <view class="list-item">
+          <!--信息直接显示部分-->
+          <view class="item" data-index="{{index}}" bindtap="bindOpenList">
+            <view class="item-content">
+              <image class="item-content-image" src="/images/core/tm.png"></image>
+              <view class="item-content-state">
+                <view class="content-state-stuId">姓名：
+                  <text class="state-name-active">{{item.name}}</text>
+                </view>
+              </view>
+            </view>
+            <!--信息直接显示部分的下拉标识-->
+            <view class="list-sign">
+              <image class="list-sign-icon {{!item.display ? 'list-sign-icon-show' : ''}}" src="/images/core/common/up.png"></image>
+            </view>
+          </view>
+          <!--信息隐藏的下拉列表-->
+          <view class="item-ul" hidden="{{!item.display}}">
+            <view class="item-ul-gendor item-ul-li">
+              <text class="ul-li-label">性别</text>
+              <text class="ul-li-content">{{item.gender}}</text>
+            </view>
+            <view class="item-ul-college item-ul-li">
+              <text class="ul-li-label">年龄</text>
+              <text class="ul-li-content">{{item.age}}</text>
+            </view>
+            <view class="item-ul-college item-ul-li">
+              <text class="ul-li-label">联系方式</text>
+              <text class="ul-li-content">{{item.phone}}</text>
+            </view>
+
+            <view wx:if="{{item.status=='Y'}}">
+              <view class="item-ul-college item-ul-li">
+                <text class="ul-li-label">照片状态</text>
+                <text class="ul-li-content">已录入</text>
+              </view>
+            </view>
+            <view wx:elif="{{item.status=='N'}}">
+              <navigator url="uploadpic/uploadpic">
+                <view class="item-ul-college item-ul-li">
+                  <text class="ul-li-label">照片状态</text>
+                  <text class="ul-li-content">未录入</text>
+                </view>
+              </navigator>
+            </view>
+
+            <view class="item-ul-college item-ul-li" style="text-align:center;" bindtap="delete">
+              <text class="ul-li-content" data-index="{{index}}" >删除</text>
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <!--列表的一个元素的模板结构-->
+
+
+    </view>
+    <navigator url="addinfo/addinfo">
+      <view class="list-item">
+        <!--信息直接显示部分-->
+        <view class="item">
+          <view class="item-content">
+            <image class="item-content-image" src="/images/core/tm.png"></image>
+            <view class="item-content-state">
+              <view class="content-state-name">
+                <text class="state-name-active">添加租户</text>
+              </view>
+            </view>
+          </view>
+          <view class="list-sign">
+            <image class="add" src="/images/more/addt.png"></image>
+          </view>
+        </view>
+
+      </view>
+    </navigator>
+
+  </view>
+</view>

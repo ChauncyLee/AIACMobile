@@ -1,0 +1,78 @@
+<!--append.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/images/index/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/images/more/title.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="/images/more/logo.png"></image>
+        <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
+        <text class="append-title">添加访客</text>
+        <form class="append-form">
+          <view wx:if="{{flagv==0}}">
+            <view class="input-group">
+              <text class="input-label">姓名</text>
+              <input type="text" id="name" name="name" bindinput="bindname" bindfocus="" bindblur="" />
+            </view>
+            <view class="input-group ">
+              <text class="input-label">性别</text>
+              <!-- <input type="text" id="gender" name="gender" bindinput="" bindfocus="" bindblur="" /> -->
+              <radio-group class="radio-group" bindchange="radioChange">
+                <label class="radio" wx:for="{{items}}">
+                  <radio id="gender" name="gender" value="{{item.name}}" checked="{{item.checked}}" bindinput="" bindfocus="" bindblur="" />{{item.value}}
+                </label>
+              </radio-group>
+            </view>
+            <view class="input-group">
+              <text class="input-label">昵称</text>
+              <input type="text" id="uname" name="uname" bindinput="binduname" bindfocus="" bindblur="" />
+            </view>
+
+          </view>
+          <view wx:elif="{{flagv==1}}">
+            <view class="input-group ">
+              <text class="input-label">年龄</text>
+              <input type="text" id="age" name="age" bindinput="bindage" bindfocus="" bindblur="" />
+            </view>
+            <view class="input-group">
+              <text class="input-label">出生日期</text>
+              <input type="text" id="dob" name="dob" bindinput="binddob" bindfocus="" bindblur="" />
+            </view>
+            <view class="input-group">
+              <text class="input-label">手机号</text>
+              <input type="text" id="username" name="username" bindinput="bindusername" bindfocus="" bindblur="" />
+            </view>
+
+
+          </view>
+          <view wx:elif="{{flagv>=2}}">
+            <view class="input-group">
+              <text class="input-label">访问起始时间</text>
+              <input type="text" id="starttime" name="starttime" bindinput="bindstarttime" bindfocus="" bindblur="" />
+            </view>
+            <view class="input-group">
+              <text class="input-label">访问结束时间</text>
+              <input type="text" id="endtime" name="endtime" bindinput="bindendtime" bindfocus="" bindblur="" />
+            </view>
+          </view>
+        </form>
+        <view wx:if="{{flagv<2}}">
+          <view class="confirm-btn" bindtap="next">
+            <text>下一步</text>
+          </view>
+        </view>
+        <view wx:elif="{{flagv>=2}}">
+          <view class="confirm-btn" bindtap="upload">
+            <text>确认添加</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </block>
+</view>

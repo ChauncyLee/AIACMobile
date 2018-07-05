@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/news/jw/jw_detail",
+    "pages/news/oa/oa_detail",
+    "pages/news/hy/hy_detail",
+    "pages/news/jz/jz_detail",
+    "pages/news/new/new_detail",
+    "pages/more/login",
+    "pages/more/append",
+    "pages/more/setinfo",
+    "pages/more/more",
+    "pages/more/issues",
+    "pages/more/about",
+    "pages/more/fmi",
+    "pages/more/setting",
+    "pages/core/der/der",
+    "pages/core/okfh/okfh",  
+    "pages/core/pr/pr",
+    "pages/core/vm/vm",
+    "pages/core/fm/fm",
+    "pages/core/tm/tm",
+    "pages/core/vi/vi",
+    "pages/core/fm/addinfo/addinfo",
+    "pages/core/fm/uploadpic/uploadpic",
+    "pages/core/vm/addinfo/addinfo",
+    "pages/core/vm/uploadpic/uploadpic",
+    "pages/core/tm/addinfo/addinfo",
+    "pages/core/tm/uploadpic/uploadpic",
+    "pages/core/na/na"
+  
+ 
+    
+
+   
+   
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#0068C4",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Face AC",
+    "backgroundColor": "#0068C4", 
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7f848a", 
+    "selectedColor": "#0068C4",
+    "backgroundColor": "#f7f6fb",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index/index.png",
+      "selectedIconPath": "images/index/index@active.png"
+    }, {
+      "pagePath": "pages/more/more",
+      "text": "我的",
+      "iconPath": "images/index/my.png",
+      "selectedIconPath": "images/index/smy.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000
+  }
+}

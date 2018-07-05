@@ -1,0 +1,103 @@
+<!--jy.wxml-->
+<view class="container">
+  <!-- <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view>
+    <block wx:else> -->
+  <view class="user-jy">
+    <view class="user-jy-item user-jy-num">
+      <text class="user-jy-hd">今日进入小区</text>
+      <view class="user-jy-bd">
+        <text class="user-jy-value">1</text>
+        <text class="user-jy-text">次</text>
+      </view>
+    </view>
+    <view class="user-jy-item user-jy-history" bindtap="jyHistory">
+      <text class="user-jy-hd">今日离开小区</text>
+      <view class="user-jy-bd">
+        <text class="user-jy-value">1</text>
+        <text class="user-jy-text">次</text>
+      </view>
+    </view>
+    <view class="user-jy-item user-jy-dbet">
+      <text class="user-jy-hd">安全等级</text>
+      <view class="user-jy-bd">
+        <text class="user-jy-value">高</text>
+        
+      </view>
+    </view>
+  </view>
+  <!-- <view wx:if="{{jyData.nothing}}" class="remind-box">
+            <image class="remind-img" src="/images/index/nothing.png"></image>
+            <text class="remind-text">当前无借阅</text>
+        </view> -->
+  <!-- <view wx:else class="book-list"> -->
+  <view class="book-list">
+    <text class="current-type">进出情况</text>
+    <!-- <block wx:for="{{jyData.book_list}}" wx:key="name" wx:for-item="itemName"> -->
+    <view class="book-wraper">
+      <view class="book-info">
+        <text class="book-name">门禁1</text>
+        <view class="book-date">
+          <text>进出方向：进入小区</text>
+          <text>经过日期：2018.03.25 12:30:28 </text>
+        </view>
+      </view>
+      <image class="book-img" src="/images/core/der.png"></image>
+    </view>
+
+    <view class="book-wraper">
+      <view class="book-info">
+        <text class="book-name">门禁1</text>
+        <view class="book-date">
+          <text>进出方向：离开小区</text>
+          <text>经过日期：2018.03.25 7:18:23 </text>
+        </view>
+      </view>
+      <image class="book-img" src="/images/core/der.png"></image>
+    </view>
+
+    <view class="book-wraper">
+      <view class="book-info">
+        <text class="book-name">门禁2</text>
+        <view class="book-date">
+          <text>进出方向：进入小区</text>
+          <text>经过日期：2018.03.24 21:33:46 </text>
+        </view>
+      </view>
+      <image class="book-img" src="/images/core/der.png"></image>
+    </view>
+
+    <view class="book-wraper">
+      <view class="book-info">
+        <text class="book-name">门禁1</text>
+        <view class="book-date">
+          <text>进出方向：离开小区</text>
+          <text>经过日期：2018.03.24 14:12:10 </text>
+        </view>
+      </view>
+      <image class="book-img" src="/images/core/der.png"></image>
+    </view>
+
+    <view class="book-wraper">
+      <view class="book-info">
+        <text class="book-name">门禁1</text>
+        <view class="book-date">
+          <text>进出方向：进入小区</text>
+          <text>经过日期：2018.03.24 12:19:16 </text>
+        </view>
+      </view>
+      <image class="book-img" src="/images/core/der.png"></image>
+    </view>
+    <!-- </block> -->
+    <!-- </view> -->
+  </view>
+  <view class="fix_tip {{jyHistoryTap?'active':''}}">
+    <text>暂不能查看进出记录哦~</text>
+  </view>
+  <!-- </block> -->
+</view>

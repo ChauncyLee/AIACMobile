@@ -1,0 +1,68 @@
+<!--more.wxml-->
+<view class="container">
+
+  <view class="user-info-box">
+    <navigator url="/pages/more/login" class="user-info" >
+      <view class="info-hd">
+        <image class="user-avatar" src="{{user.wx.avatarUrl}}"></image>
+        <view class="user-title">
+          <text class="user-name">{{user.wx.nickName}}</text>
+          <text class="user-id">账号:{{userid}}</text>
+        </view>
+       
+        <view class="btn-open">
+          <image class="btn-enter" src="/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <view class="first-list">
+    <navigator url="/pages/more/setinfo" class="issue-link">
+      <view class="more-btn">
+       
+        <text class="btn-text">修改资料</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="fmi" class="about-link">
+      <view class="more-btn">
+        
+        <text class="btn-text">修改密码</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+
+
+  </view>
+
+
+
+
+  <view class="more-list">
+    <navigator url="login" class="about-link">
+      <view class="userset">
+      
+        <text class="btn-text">切换账号</text>
+       
+      </view>
+    </navigator>
+
+
+    <view  class="about-link">
+      <view class="userset">
+      
+        <text class="btn-text">注销</text>
+     
+      </view>
+    </view>
+  </view>
+
+
+
+</view>
